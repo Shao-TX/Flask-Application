@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-Tw">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Reading System</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/cat_oh.ico') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="../static/js/arduino.js"></script>
+    <script src="../static/js/text2image.js"></script>
+    <script src="../static/js/text2emotion.js"></script>
+    <link rel="stylesheet", href="../static/css/toogle_switch.css" />
+    <link rel="stylesheet", href="../static/css/loding_icon.css" />
+</head>
+
+<body>
+    <h2>Reading System</h2>
+
+    <div>
+        <h4>(1) Arduino Control : </h4>
+        Arduino
+        <label class="switch">
+            <input id="arduino_button" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <p id="arduino_state">Arduino : </p>
+    </div>
+
+    <div>
+        <h4>(2) Text to Image : </h4>
+        <input id="text2image", type="text", placeholder="請輸入要產生圖片的句子", style="width:400px">
+        <button id="text2image_button", type="button">Enter</button>
+        <br />
+        <br />
+        <img id="g_img">
+    </div>
+
+    <div class="loader", style="display:none"></div>
+
+    <div>
+        <h4>(3) Text Emotion : </h4>
+        <input id="text2emotion", type="text", placeholder="請輸入要測試情緒的文字", style="width:400px">
+        <button id="text2emotion_button", type="button">Enter</button>
+        <br />
+        <p id="emotion_state">Text Emotion : </p>
+    </div>
+</body>
+
+</html>

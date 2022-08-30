@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-Tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="測試用網站" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- 隨視窗縮放 -->
+    <title>ShaoTX</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/cat_oh.ico') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        #print_text {
+            color: red;
+            font-size: 20px;
+            background-color: #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        // 語法為 $（對象）. 行為（參數/任務）
+        $(document).ready(function () {
+
+            $("#no_animal").click(function () {
+                $(".animal").hide();
+            })
+
+            $("#no_human").click(function () {
+                $("#human").hide();
+            });
+
+            $("#yes_animal").click(function () {
+                $(".animal").show();
+            });
+
+            $("#yes_human").click(function () {
+                $("#human").show();
+            });
+
+            $("#check").click(function () {
+                var check_value = $(this).val();
+                alert(check_value);
+            });
+
+            $('#box_a').dblclick(function () {
+                $("#box_b").toggle();
+            });
+        });
+    </script>
+
+    <!-- 基本標籤 -->
+    <h1>ShaoTX</h1>
+    <p> <b> DHH * 1 </b> </p>
+
+    <!-- 按鈕 -->
+    <button type="button">按我</button>
+
+    <!-- 連結 ＆ 圖片-->
+    <br />
+    <a href="https://twitter.com/himemoriluna">姫森ルーナ : Twitter</a>
+    <br />
+    <!-- <a href="../Luna.jpeg">姫森ルーナ : Image</a> -->
+
+    <img src="https://pbs.twimg.com/media/FaEt0yAVsAAr006?format=jpg&name=large" width="400" />
+
+    <!-- 影片 ＆ 嵌入 Youtube 影片 -->
+    <!-- <video src="../Video.mp4">無法載入影片</video> -->
+    <br />
+    <iframe width="960" height="1707" src="https://www.youtube.com/embed/FJwcolO0-_E" title="『SOS』Dance Movie #Shorts"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <!-- 列表 ＆ 表格 -->
+    <ul>
+        <li>長戟大兜</li>
+        <li>美西白兜</li>
+        <li>墨西哥白兜</li>
+    </ul>
+
+    <table width="400">
+        <tr>
+            <td>日期</td>
+            <td>長戟大兜</td>
+            <td>美西白兜</td>
+            <td>墨西哥白兜</td>
+        </tr>
+        <tr>
+            <td>8/11</td>
+            <td>250</td>
+            <td>150</td>
+            <td>150</td>
+        </tr>
+    </table>
+
+    <!--容器 div & span-->
+    <div style="color: red;">
+
+        <ul>
+            <li>長戟大兜</li>
+            <li>美西白兜</li>
+            <li>墨西哥白兜</li>
+        </ul>
+
+        <table width="400">
+            <tr>
+                <td>日期</td>
+                <td>長戟大兜</td>
+                <td>美西白兜</td>
+                <td>墨西哥白兜</td>
+            </tr>
+            <tr>
+                <td>8/11</td>
+                <td>250</td>
+                <td>150</td>
+                <td>150</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <!-- 輸入標籤-->
+    <input type="text" placeholder="請輸入帳號" />
+    <br />
+    <br />
+    <input type="password" placeholder="請輸入密碼" />
+    <br />
+    <br />
+    <input type="date" />
+    <br />
+    <br />
+    <input type="range" />
+    <br />
+    <br />
+    <input type="file" />
+    <br />
+    <br />
+    <input type="checkbox" />
+    <br />
+    <br />
+    <textarea></textarea>
+
+    <!-- JQuery test -->
+    <div class="animal">Dog</div>
+    <div class="animal">Cat</div>
+    <div id="human">Human</div>
+
+    <button id="no_human">Click me to clear human</button>
+    <br />
+    <button id="no_animal">Click me to clear animal</button>
+    <br />
+    <button id="yes_human">Click me to show human</button>
+    <br />
+    <button id="yes_animal">Click me to show animal</button>
+    <br />
+
+    <div id="box_a">box_a</div>
+    <div id="box_b">box_b</div>
+
+    <div id="CheckButton" style="position: relative; width:25%; background-color:blue;">
+        <p>Turn on & off <input id="check" type="checkbox" /></p>
+    </div>
+
+    <p id="print_text">Style Test</p>
+
+
+</body>
+
+</html>
