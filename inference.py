@@ -27,7 +27,7 @@ def text_emotion(text):
     print(prediction[0][3]["label"], prediction[0][3]['score'])
     print(prediction[0][4]["label"], prediction[0][4]['score'])
 
-    for i in range(5):
+    for i in range(emotion_num):
         predict_list.append(prediction[0][i]['score'])
 
     print(max(predict_list))
