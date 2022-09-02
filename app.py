@@ -1,4 +1,4 @@
-from inference import toArduino, text_emotion
+from inference import toArduino, text_emotion, text_summarization
 from generate import g_img_1
 import os
 
@@ -53,6 +53,17 @@ def text_emoiton():
     emotion = text_emotion(data)
 
     return emotion
+
+# 負責處理文字摘要化
+@app.route("/text_summary", methods=['POST', 'GET'])
+def text_summary():
+    if request.method == 'POST':
+        data = (request.get_data()).decode('utf-8')
+    
+    print("文字摘要化中...")
+    summary = text_summarization(data)
+
+    return summary
 
 if __name__ == "__main__":
     app.debug=True

@@ -6,9 +6,12 @@
     <title>Reading System</title>
     <link rel="icon" href="{{ url_for('static', filename='img/cat_oh.ico') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script src="../static/js/arduino.js"></script>
     <script src="../static/js/text2image.js"></script>
     <script src="../static/js/text2emotion.js"></script>
+    <script src="../static/js/text2summary.js"></script>
+
     <link rel="stylesheet", href="../static/css/toogle_switch.css" />
     <link rel="stylesheet", href="../static/css/loding_icon.css" />
 </head>
@@ -43,6 +46,15 @@
         <button id="text2emotion_button", type="button">Enter</button>
         <br />
         <p id="emotion_state">Text Emotion : </p>
+    </div>
+
+    <div>
+        <h4>(4) Text Summary : </h4>
+        <textarea id="text2summary", placeholder="請輸入要摘要化的文字", style="resize: none; width: 300px; height: 350px; font-size:13px;"></textarea>
+        <button id="text2summary_button", type="button">Enter</button>
+        <br />
+        <p >Text Summary : </p>
+        <p id="summary_state", style="font-size: 13px;"></p>
     </div>
 </body>
 
