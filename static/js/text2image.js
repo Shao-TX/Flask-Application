@@ -9,8 +9,8 @@ $(document).ready(function () {
             type: "POST",
             url: "http://127.0.0.1:5000/generate_image",
             data: g_text,
-            success: function (data) {
-                var g_img = "../static/img/" + data + ".png"
+            success: function (response) {
+                var g_img = "../static/img/" + response + ".png"
                 alert(g_img)
                 $(".loader").hide()
                 $("#g_img").prop("src", g_img)

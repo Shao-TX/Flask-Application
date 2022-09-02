@@ -6,9 +6,9 @@ $(document).ready(function () {
             type: "POST",
             url: "http://127.0.0.1:5000/text_emotion",
             data: e_text,
-            success: function (data) {
-                alert(data)
-                $('#emotion_state').text("Text Emotion : " + data);
+            success: function (response) {
+                alert(response)
+                $('#emotion_state').text("Text Emotion : " + response);
             }
         });
     });

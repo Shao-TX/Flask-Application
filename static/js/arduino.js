@@ -8,8 +8,8 @@ $(document).ready(function () {
                 type: "POST",
                 url: "http://127.0.0.1:5000/control_arduino",
                 data: "On",
-                success: function (data) {
-                    $('#arduino_state').text("Arduino : " + data);
+                success: function (response) {
+                    $('#arduino_state').text("Arduino : " + response);
                 }
             });
         }
@@ -19,8 +19,8 @@ $(document).ready(function () {
                 type: "POST",
                 url: "http://127.0.0.1:5000/control_arduino",
                 data: "Off",
-                success: function (data) {
-                    $('#arduino_state').text("Arduino : " + data);
+                success: function (response) {
+                    $('#arduino_state').text("Arduino : " + response);
                 }
             })
         }
